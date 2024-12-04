@@ -11,7 +11,7 @@ FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
-/* MAIN COLOR:  #087f5b
+/* MAIN COLOR:  #00ff00
 OTHER COLOR: #ffff00
 OTHER COLOR: #ff0000
 OTHER COLOR: #0000ff*/
@@ -24,4 +24,10 @@ OTHER COLOR: #0000ff*/
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+button {
+  width: 1rem;
+  height: 0.2rem;
+  border: none;
 }
