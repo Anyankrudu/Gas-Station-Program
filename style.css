@@ -4,10 +4,10 @@
  * I will deeply appreciate it! 😊
   */
 
-/* SPACING SYSTEM (px)
+/* SPACING SYSTEM (rem)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-FONT SIZE SYSTEM (px)
+FONT SIZE SYSTEM (rem)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
 
@@ -31,17 +31,15 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: #444;
-
   background-color: #f3f3f3;
   height: 120vh;
   margin: 0.1rem auto;
   padding: 2rem;
-  /* box-shadow: 0px 5px 100px 0 rgba(0, 0, 0, 0.07); */
-  /* border-radius: 0.2rem; */
 }
 
 button {
   border: none;
+  cursor: pointer;
 }
 
 nav {
@@ -58,16 +56,28 @@ nav {
 
 .main__app {
   display: flex;
-  gap: 10rem;
+  gap: 6rem;
   padding: 0 2rem;
-  max-width: 70rem;
+  max-width: 60rem;
   margin: 4rem auto;
+}
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  place-items: center;
+  width: 25rem;
+}
+
+.product__boxes {
+  width: 25rem;
 }
 
 .company__title {
   margin-left: 0.5rem;
 }
-.company__msg {
+.bonus__msg {
   margin-right: 0.5rem;
 }
 
@@ -103,6 +113,7 @@ nav {
   border-radius: 100px;
   background-color: #32cd32;
   box-shadow: 0px 5px 100px 0 rgba(0, 0, 0, 0.07);
+  cursor: pointer;
 }
 
 .product__price {
@@ -130,14 +141,14 @@ form {
   /* border: 1px solid grey; */
   margin-bottom: 10rem;
   padding: 1rem 1rem;
-  /* max-width: 16rem; */
+  height: 20rem;
+  max-width: 16rem;
   /* height: 20rem; */
   border-radius: 0.5rem;
   box-shadow: 0px 5px 100px 0 rgba(0, 0, 0, 0.07);
 }
 
 input {
-  border: none;
   /* padding: 0.01rem 0.01rem; */
   border: 1px solid grey;
   font-size: 1rem;
@@ -147,7 +158,7 @@ input {
   border-radius: 0.5rem;
   height: 2rem;
   color: inherit;
-  border: 1px solid #fff;
+
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -156,12 +167,23 @@ input {
   margin-bottom: 2.5rem;
 }
 
-.all__pumps {
+.btns {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
   gap: 0.8rem;
-  /* margin-bottom: 0.2rem; */
-  /* margin-bottom: 0.5rem; */
+}
+
+.btn__pump {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  width: 4rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background-color: none;
+  border: 1px solid grey;
+  cursor: pointer;
 }
 
 .pumps__caption {
@@ -169,32 +191,36 @@ input {
   height: 0.1rem;
 }
 
-.pump {
-  margin-bottom: 1.5rem;
-  width: 4rem;
-  height: 2rem;
-  border-radius: 0.5rem;
-  background-color: none;
-  border: 1px solid grey;
-}
-
 .buy__btn {
   width: 10rem;
   height: 1.5rem;
   border-radius: 0.5rem;
   background-color: #32cd32;
+  pointer-events: auto;
+  /* cursor: pointer; */
 }
 
 .grid-1-col {
-  max-width: 30rem;
+  width: 20rem;
 
-  height: 36rem;
+  height: 34rem;
   display: grid;
   grid-template-columns: 4fr;
   justify-items: center;
   border-radius: 0.5rem;
   box-shadow: 0px 5px 100px 0 rgba(0, 0, 0, 0.07);
   margin-bottom: 10rem;
+}
+
+.grid-1-col_1 {
+  /* opacity: 0; */
+  z-index: 2;
+  grid-area: 1/1;
+}
+
+.grid-1-col_2 {
+  opacity: 0;
+  z-index: 1;
   grid-area: 1/1;
 }
 
@@ -213,16 +239,9 @@ input {
   justify-content: space-around;
   margin-bottom: 2rem;
 }
-.grid-1-col_2 {
-  opacity: 0;
-}
 
-.grid-1-col_1 {
-  /* opacity: 0; */
-}
-.grid-1 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  place-items: center;
+.receipt__msg {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
 }
